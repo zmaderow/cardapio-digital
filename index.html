@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d7de81155c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <img draggable="false" src="./assets/img/background.webp" alt="background image" id="background">
+    </div>
+
+    <header>
+        <h1>Cardápio Digital</h1>
+        <a href="#" id="cartBtn" onclick="showInfoModal('cart')"><i class="fa-solid fa-cart-shopping"></i></a>
+    </header>
+
+    <main>
+        <div class="restaurantCategory">
+            <div id="restaurantInfo">
+                <h1>Pizzaria</h1>
+                <p id="restaurantInfoLocation"><i class="fa-solid fa-map-pin restaurantInfoIcon"></i> Lorem, ipsum dolor
+                    sit amet consectetur</p>
+                <div id="restaurantInfoDiv">
+                    <p onclick="writeTextClipboard('+55 (11) 9123-4567'); createToast('invalid', 'Telefone copiado para a área de transferência')"
+                        style="cursor: pointer;">
+                        <i class="fa-solid fa-phone restaurantInfoIcon"></i> +55 (11) 9123-4567
+                    </p>
+                    <p><i class="fa-solid fa-clock restaurantInfoIcon"></i> 30 - 65min</p>
+                </div>
+            </div>
+            <hr>
+
+            <div id="menuCategories">
+                <div class="menuCategoriesItem">
+                    <img draggable="false" src="./assets/img/pizzasBackground.jpg" alt="pizza"
+                        class="menuCategoriesItemImg">
+                    <h1 class="menuCategoriesItemTitle">Pizzas</h1>
+                </div>
+
+                <div class="menuCategoriesItem">
+                    <img draggable="false" src="./assets/img/sobremesasBackground.webp" alt="pizza"
+                        class="menuCategoriesItemImg">
+                    <h1 class="menuCategoriesItemTitle">Sobremesas</h1>
+                </div>
+
+                <div class="menuCategoriesItem">
+                    <img draggable="false" src="./assets/img/bebidasBackground.jpg" alt="pizza"
+                        class="menuCategoriesItemImg">
+                    <h1 class="menuCategoriesItemTitle">Bebidas</h1>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="restaurantMenu">
+
+
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="restaurantMenuItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="" class="restaurantMenuItemImg">
+                <div class="restaurantMenuItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>Molho de tomate, mussarela, bacon, presunto</p>
+                    <div class="restaurantMenuItemInfoPriceDiv">
+                        <h2 class="restaurantMenuItemInfoPrice"><span class="highlight">R$</span>59<span
+                                class="highlight">,</span>90</h2>
+                        <a href="#" onclick="showInfoModal('itemDesc')" class="restaurantMenuItemInfoPriceView">Ver
+                            mais</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </main>
+
+    <div class="modal" id="itemInfoModal">
+        <!-- <div class="modalTitleDiv">
+            <h1 id="modalTitle">CARRINHO</h1>
+            <a><i onclick="closeInfoModal()" id="modalCrossClose" class="fa-solid fa-x"></i></a>
+        </div>
+        <div class="modalContent">
+            <div class="modalContentItem">
+                <img draggable="false" src="./assets/img/pizza-placeholder.webp" alt="pizza"
+                    class="modalContentItemImg   ">
+                <div class="modalContentItemInfo">
+                    <h1>Portuguesa</h1>
+                    <p>
+                        <span class="highlight">R$</span>59<span class="highlight">,</span>90
+                    </p>
+                </div>
+            </div>
+
+            <p class="modalContentSubtotal">Subtotal: <span class="highlight">R$</span>59<span
+                    class="highlight">,</span>90</p>
+        </div>
+        <div class="modalButtons">
+            <a href="#" onclick="closeInfoModal()">Fechar</a>
+            <a href="#" class="modalButtonFinalizar"
+                onclick="closeInfoModal(); createToast('success', 'Pedido enviado!')">Finalizar pedido</a>
+        </div> -->
+    </div>
+
+
+    <div id="toastBox"></div>
+
+</body>
+
+</html>
