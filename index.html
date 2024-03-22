@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style.css">
-    <script src="./assets/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -25,7 +24,7 @@
         <a href="#" id="cartBtn" onclick="showInfoModal('cart')"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
 
-    <main>
+    <main class="main">
         <div class="restaurantCategory">
             <div id="restaurantInfo">
                 <h1>Pizzaria</h1>
@@ -62,7 +61,7 @@
             </div>
         </div>
 
-        <hr>
+        <hr id="semi">
 
         <div class="restaurantMenu">
 
@@ -168,8 +167,10 @@
         </div>
     </main>
 
-    <div class="modal" id="itemInfoModal">
-        <!-- <div class="modalTitleDiv">
+    <div id="modalContainer" class='out'>
+        <div class="modalContainerContent">
+            <div class="modal" id="itemInfoModal">
+                <!-- <div class="modalTitleDiv">
             <h1 id="modalTitle">CARRINHO</h1>
             <a><i onclick="closeInfoModal()" id="modalCrossClose" class="fa-solid fa-x"></i></a>
         </div>
@@ -193,11 +194,14 @@
             <a href="#" class="modalButtonFinalizar"
                 onclick="closeInfoModal(); createToast('success', 'Pedido enviado!')">Finalizar pedido</a>
         </div> -->
+            </div>
+        </div>
     </div>
-
 
     <div id="toastBox"></div>
 
 </body>
+
+<script src="./assets/script.js"></script>
 
 </html>

@@ -1,1 +1,4 @@
-# cardapio-digital
+# Cardápio Digital
+
+## Funções
+- [ ] 

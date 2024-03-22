@@ -9,7 +9,7 @@ function cartRemove() {
 function showInfoModal(type) {
     //Código provisório para testes
     let modal = document.getElementById('itemInfoModal')
-    modal.style.display = "block"
+    // modal.style.display = "block"
 
     switch (type.toLowerCase()) {
         case 'cart':
@@ -57,8 +57,8 @@ function showInfoModal(type) {
                 </div>
             </div>
 
-            <div style="margin-top: 30px; font-size: 20px; padding-left: 20px;">
-                <p style="margin-bottom: 10px;">Ingredientes</p>
+            <div class="modalContentItemList">
+                <p class="modalContentItemListTitle">Ingredientes</p>
                 <ul>
                     <li>Molho de tomate</li>
                     <li>Mussarela</li>
@@ -75,11 +75,16 @@ function showInfoModal(type) {
                 onclick="closeInfoModal(); createToast('success', 'Item adicionado ao carrinho!')">Adicionar ao carrinho</a>
         </div>`)
             break
-        
+
         default:
             createToast('error', 'Ocorreu um erro ao executar a função')
             modal.style.display = "none"
     }
+
+
+    document.querySelector('#modalContainer').removeAttribute('class');
+    document.querySelector('#modalContainer').classList.add('reveal');
+    document.querySelector('main').classList.add('modal-active');
 
     //Função que receberá modalTitle, modalContent e modalButtons e criará um modal para ser exibido ao usuário com determinadas funções
 }
@@ -89,7 +94,11 @@ function closeInfoModal() {
     while (modal.firstChild) {
         modal.removeChild(modal.firstChild)
     }
-    modal.style.display = "none"
+    // modal.style.display = "none"
+
+
+    document.querySelector('#modalContainer').classList.add('out');
+    document.querySelector('main').classList.remove('modal-active');
 
 }
 
@@ -125,4 +134,22 @@ function createToast(type, text) {
 
 async function writeTextClipboard(text) {
     navigator.clipboard.writeText(text)
+}
+
+
+data = {
+    "restaurante": {
+        "nome": "Cleitin Pizzaria"
+    },
+    "cardapio": {
+        "pizzas": {
+            "portuguesa": {
+                "ingredientes": [
+                    "molho",
+                    "batata",
+                    "queijo"
+                ]
+            }
+        }
+    }
 }
