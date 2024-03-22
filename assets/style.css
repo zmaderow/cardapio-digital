@@ -78,13 +78,17 @@ a {
     align-items: center;
 }
 
+#restaurantInfo h1 {
+    font-size: 190%;
+}
+
 #restaurantInfo p {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     gap: .8rem;
-    font-size: 18px;
+    font-size: 100%;
 }
 
 #restaurantInfoLocation {
@@ -110,13 +114,18 @@ a {
     gap: 1rem;
 }
 
+.menuCategoriesItem {
+    cursor: pointer;
+}
+
 .menuCategoriesItem:hover {
     transform: scale(1.07) translateX(10px);
 }
 
 .menuCategoriesItemImg {
-    width: 345px;
-    height: 125px;
+    width: 100%;
+    height: 13vh;
+    object-fit: cover;
     border-radius: 15px;
     -webkit-mask-image: linear-gradient(to right, transparent 1%, var(--background));
     filter: saturate(110%);
@@ -124,7 +133,7 @@ a {
 
 .menuCategoriesItemTitle {
     position: relative;
-    top: -90px;
+    top: -70%;
     left: 30px;
     height: 1px;
 }
@@ -143,11 +152,12 @@ a {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2rem;
+    align-items: center;
 }
 
 .restaurantMenuItemImg {
-    width: 300px;
-    height: 200px;
+    width: 30%;
+    height: max-content;
     border-radius: 25px;
 }
 
@@ -190,6 +200,7 @@ a {
 
 .modal {
     margin: 0 2rem;
+    width: fit-content;
 }
 
 .modalTitleDiv {
@@ -216,7 +227,7 @@ a {
 }
 
 .modalContentItemImg {
-    width: 40%;
+    width: 20%;
     height: fit-content;
     border-radius: 15px;
 }
@@ -255,6 +266,7 @@ a {
     text-align: end;
     font-size: 25px;
     font-weight: 600;
+    margin-top: 4rem;
 }
 
 .modalButtons {
@@ -506,22 +518,9 @@ main.modal-active {
 
 /* https://codepen.io/designcouch/pen/obvKxm */
 
-@media screen and (min-width: 600px) and (max-width: 995px) {
-    main {
-        flex-direction: column;
-    }
-
-    #cartBtn {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 0) and (max-width: 599px) {
+@media screen and (min-width: 0) and (max-width: 995px) {
     main {
         padding: 1rem;
-    }
-
-    main {
         flex-direction: column;
         align-items: center;
     }
@@ -531,13 +530,8 @@ main.modal-active {
     }
 
     header {
-        padding: 3rem 1rem;
+        padding: 3rem 2rem;
     }
-
-    /* #cartBtn {
-        position: fixed;
-        right: 20px;
-    } */
 
     #restaurantInfo {
         margin: 0 auto;
@@ -553,12 +547,6 @@ main.modal-active {
         font-size: 200%;
         align-self: center;
     }
-
-    .restaurantCategory {
-        width: 90%;
-        margin: 0 auto;
-    }
-
 
     .menucategories {
         display: inline;
@@ -601,16 +589,12 @@ main.modal-active {
     .restaurantMenuItem {
         width: 100%;
         padding-right: 1rem;
-    }
-
-    .restaurantMenuItemImg {
-        width: 30vw;
-        height: 30vw;
+        justify-content: center;
     }
 
     .restaurantMenuItemInfo h1,
     h2 {
-        font-size: 150%;
+        font-size: clamp(25px, 4vw, 35px);
     }
 
     .restaurantMenuItemInfo p {
@@ -618,7 +602,7 @@ main.modal-active {
     }
 
     .restaurantMenuItemInfoPrice {
-        font-size: 6vw;
+        font-size: clamp(25px, 4vw, 30px);
     }
 
     .modal {
@@ -644,5 +628,10 @@ main.modal-active {
         margin-top: 20px;
         font-size: 120%;
         font-weight: 500;
+    }
+
+    .restaurantMenuItemInfoPriceDiv {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
